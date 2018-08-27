@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".WeatherAcvtivity"
+    tools:showIn="@layout/content_weather_acvtivity"
+    android:background="@drawable/dsadsa">
+
+
+    <ImageView
+        android:id="@+id/WeatherIconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/icon_na"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <TextView
+        android:id="@+id/temperatureTextView"
+        android:layout_width="109dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/WeatherIconImageView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/temperature"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="121dp" />
+
+    <TextView
+        android:id="@+id/conditionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatureTextView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/condition"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="172dp" />
+
+    <TextView
+        android:id="@+id/locationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conditionTextView"
+        android:layout_centerHorizontal="true"
+        android:freezesText="false"
+        android:text="@string/location"
+        android:textStyle="bold"
+        android:typeface="serif"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="103dp"
+        app:srcCompat="@drawable/yahoo_logo"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+</RelativeLayout>

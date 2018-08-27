@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="SelectIngredients">Select ingredients:</string>
+    <string name="Meat">Meat</string>
+    <string name="Meatballs">Meatballs</string>
+    <string name="Chicken">Chicken</string>
+
+    <string name="Egg">Egg</string>
+    <string name="Fish">Fish</string>
+    <string name="Toast">Toast</string>
+
+    <string name="Tofu">Tofu</string>
+    <string name="Lentil_patties">Lentil patties</string>
+    <string name="Eggplant_in_Tehina">Eggplant in Tehina</string>
+
+    <string name="Vegetable_Salad">Vegetable Salad</string>
+    <string name="Rice">Rice</string>
+    <string name="Puree">Puree</string>
+    <string name="Bean">Bean</string>
+
+    <string name="title_activity_weather_acvtivity">WeatherAcvtivity</string>
+    <string name="location">Location</string>
+    <string name="temperature">Temperature</string>
+    <string name="condition">Condition</string>
+    <string name="appbar_scrolling_view_behavior" />
+
+</resources>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "97019140041",
+    "firebase_url": "https://greenskyapp-7720e.firebaseio.com",
+    "project_id": "greenskyapp-7720e",
+    "storage_bucket": "greenskyapp-7720e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97019140041:android:9b537403cc3f9ff9",
+        "android_client_info": {
+          "package_name": "com.example.user.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97019140041-cm40jcm06p04tv6jbm6c5oono7354sf7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.myapplication",
+            "certificate_hash": "c784e045e66017da450b369ecaff2bb46f47fdf1"
+          }
+        },
+        {
+          "client_id": "97019140041-akvla2klgsk4e9335t5at9i4fov2131a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPm9BCP3q3tBiiFj9LvS6paWnodNXrgKU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97019140041-akvla2klgsk4e9335t5at9i4fov2131a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

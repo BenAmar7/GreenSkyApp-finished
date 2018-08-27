@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlightInfoAndWeatherActivity"
+    android:textColor="@drawable/logo"
+    android:background="@drawable/dsadsa"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:gravity="left"
+        android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1dp"
+        android:text="Flights Information:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    <TextView
+        android:id="@+id/departureTextView"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:fadingEdge="none"
+        android:inputType="textPersonName"
+        android:text="Departure Time:"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/DepartureTimeTextView"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/departureTextView"
+
+        android:ems="10"
+        android:inputType="time"
+        android:text="18:45"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/ArrivalTimeTimeTextView"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/arrivalTimeTextView"
+        android:ems="10"
+        android:inputType="time"
+        android:text="02:10"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/flightDurationTimeTextView"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignTop="@+id/flightDurationTextView"
+        android:ems="10"
+        android:inputType="time"
+        android:text="04:50"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/arrivalTimeTextView"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+
+
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="88dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Arrival Time:"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/flightDurationTextView"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+
+
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="139dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Flight Duration:"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/departureAirPortTextView"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+
+
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Departure Air-Port:" />
+
+    <TextView
+        android:id="@+id/departureAirPortNameTextView"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/departureAirPortTextView"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Ben-Gurion, Tel Aviv"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/arrivalAirPortTextView"
+
+        android:layout_width="160dp"
+
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="249dp"
+
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Arrival Air-Port:"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/arrivalAirPortTextTextView"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/arrivalAirPortTextView"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Schiphol, Amsterdam"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/DestinationWeatherTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="198dp"
+        android:ems="10"
+        android:gravity="left"
+        android:inputType="textPersonName"
+        android:text="Destination-Weather:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    <Button
+        android:id="@+id/btnGoBackAct"
+        android:layout_width="113dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="25dp"
+        android:text="Go Back" />
+
+    <Button
+        android:id="@+id/btnGoToWeatherActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="125dp"
+        android:text="For weather at the destination" />
+
+
+</RelativeLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundfoodmenu"
+    tools:context=".MealsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-58dp"
+        android:text="Please select a maximum of three total ingredients for the meal:" />
+
+    <CheckBox
+        android:id="@+id/meat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="38dp"
+        android:onClick="selectItem"
+        android:text="@string/Meat" />
+
+    <CheckBox
+        android:id="@+id/meatballs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/meat"
+        android:onClick="selectItem"
+        android:text="@string/Meatballs" />
+
+    <CheckBox
+        android:id="@+id/chicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="111dp"
+        android:onClick="selectItem"
+        android:text="@string/Chicken" />
+
+    <CheckBox
+        android:id="@+id/egg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/chicken"
+        android:onClick="selectItem"
+        android:text="@string/Egg" />
+
+    <CheckBox
+        android:id="@+id/fish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/egg"
+        android:onClick="selectItem"
+        android:text="@string/Fish" />
+
+    <CheckBox
+        android:id="@+id/toast"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_above="@+id/tofu"
+        android:layout_alignParentStart="true"
+        android:onClick="selectItem"
+        android:text="@string/Toast" />
+
+    <CheckBox
+        android:id="@+id/tofu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:onClick="selectItem"
+        android:text="@string/Tofu" />
+
+    <CheckBox
+        android:id="@+id/lentil_patties"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tofu"
+        android:onClick="selectItem"
+        android:text="@string/Lentil_patties" />
+
+
+    <CheckBox
+        android:id="@+id/eggplant_in_tehina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lentil_patties"
+        android:onClick="selectItem"
+        android:text="@string/Eggplant_in_Tehina" />
+
+    <CheckBox
+        android:id="@+id/vegetable_Salad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="128dp"
+        android:onClick="selectItem"
+        android:text="@string/Vegetable_Salad" />
+
+    <CheckBox
+        android:id="@+id/rice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vegetable_Salad"
+        android:layout_marginTop="-128dp"
+        android:onClick="selectItem"
+        android:text="@string/Rice" />
+
+    <CheckBox
+        android:id="@+id/puree"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rice"
+        android:onClick="selectItem"
+        android:text="@string/Puree" />
+
+    <CheckBox
+        android:id="@+id/bean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/puree"
+        android:onClick="selectItem"
+        android:text="@string/Bean" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="42dp"
+        android:onClick="finalSelection"
+        android:text="continue" />
+
+
+</RelativeLayout>
