@@ -20,16 +20,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private User user;
-    private static long userId = 1;
     private Button finalReg;
-    private boolean regComplete;
     private EditText textEMail, textPassword, textVerifyPassword, textName;
-    private String name, password, verifyPassword;
-    //private DataBaseHelper dbHelper;
-    //private FirebaseDatabase databaseGreenSky;
-    //private DatabaseReference usersDB;
-    //private FirebaseAuth mAuth;
+    private String name, password, verifyPassword, email;
 
     public void init() {
         finalReg = (Button) findViewById(R.id.finalReg);
@@ -38,10 +31,6 @@ public class RegisterActivity extends AppCompatActivity {
         textVerifyPassword = (EditText) findViewById(R.id.verifyPassword);
         textName = (EditText) findViewById(R.id.textName);
 
-        //dbHelper = new DataBaseHelper();
-        //databaseGreenSky = FirebaseDatabase.getInstance();
-        //usersDB = databaseGreenSky.getReference();
-        //mAuth = FirebaseAuth.getInstance();
         finalReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,17 +46,9 @@ public class RegisterActivity extends AppCompatActivity {
         init();
     }
 
-    /*@Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        //updateUI(currentUser);
-    }
-*/
     private void registerUser() {
-        String email = textEMail.getText().toString().trim();
-        String password = textPassword.getText().toString().trim();
+        email = textEMail.getText().toString().trim();
+        password = textPassword.getText().toString().trim();
         name = textName.getText().toString().trim();
 
         verifyPassword = textVerifyPassword.getText().toString();
@@ -105,33 +86,5 @@ public class RegisterActivity extends AppCompatActivity {
                 });
 
     }
-
-/*
-    protected void checkingRegistration() {
-        name = textEMail.getText().toString();
-        password = textPassword.getText().toString();
-        verifyPassword = textVerifyPassword.getText().toString();
-
-        if (password.equals(verifyPassword)) {
-            regComplete = true;
-            user = new User(name, password, userId);
-            //usersDB.child("users").child(String.valueOf(user.getId()))push().setValue(user);
-            userId++;
-            Toast.makeText(this, "Signup completed", Toast.LENGTH_SHORT).show();
-
-        } else {
-            regComplete = false;
-            Toast.makeText(this, "Password doesn't match", Toast.LENGTH_SHORT).show();
-        }
-        if (regComplete) {
-            try {
-                Intent fb = new Intent(RegisterActivity.this, LoginActivity.class);
-                startActivity(fb);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }*/
-
 
 }

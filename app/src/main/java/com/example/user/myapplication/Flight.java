@@ -8,7 +8,6 @@ import java.util.Map;
 public class Flight implements Serializable {
     private String numFlight, takeOff, Landing, from, whereTo;
     private Map<String, Long> passengersList = new HashMap<>();
-    //private DataBaseHelper dbHelper = new DataBaseHelper();
 
     public String getFrom() {
         return from;
@@ -26,9 +25,7 @@ public class Flight implements Serializable {
         this.whereTo = whereTo;
     }
 
-    public Flight() {
-
-    }
+    public Flight() {    }
 
     public Flight(String numFlight, String takeOff, String landing,String from, String whereTo) {
         this.numFlight = numFlight;

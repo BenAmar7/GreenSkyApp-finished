@@ -26,22 +26,15 @@ import java.util.List;
 public class LoginActivity extends AppCompatActivity {
 
     public Button regButton, logInButton;
-    //private FirebaseDatabase databaseGreenSky;
-    //private DatabaseReference usersDB;
     private EditText textName, textPassword;
-    private long id, points;
     private String name, password;
-    private List<User> allUsers = new ArrayList<>();
-    //private DataBaseHelper dbHelper;
 
     public void init() {
         regButton = (Button) findViewById(R.id.regButton);
         logInButton = (Button) findViewById(R.id.logInButton);
         textName = (EditText) findViewById(R.id.logInUserName);
         textPassword = (EditText) findViewById(R.id.logInPassword);
-        //databaseGreenSky = FirebaseDatabase.getInstance();
-        //usersDB = databaseGreenSky.getReference();
-        //dbHelper = new DataBaseHelper();
+
 
         regButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,21 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                 signIn();
             }
         });
-/*
-        dbHelper.getUsersDB().child("users").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot child : dataSnapshot.getChildren()) {
-                    User newUser = child.getValue(User.class);
-                    allUsers.add(newUser);
-                }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });*/
     }
 
     @Override
@@ -83,20 +62,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    /*
-        public void getUsersData() {
-            name = textName.getText().toString();
-            password = textPassword.getText().toString();
-            for (User user : allUsers) {
-                if ((name.equals(user.getName())) && (password.equals(user.getPassword()))) {
-                    //moveToNextActivity(user);
-                    return;
-                }
-            }
-            Toast.makeText(this, "Incorrect Username or Password", Toast.LENGTH_SHORT).show();
 
-        }
-    */
     public void moveToNextActivity(FirebaseUser user) {
         Intent na = new Intent(LoginActivity.this, UserActivity.class);
         finish();

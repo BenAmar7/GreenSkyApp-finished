@@ -24,15 +24,10 @@ public class BuyFlightsActivity extends AppCompatActivity implements AdapterView
     private ListView flightsList;
     private List<Flight> flights;
     private List<String> userFlights;
-    private DataBaseHelper dbHelper;
     private ArrayAdapter<Flight> flightListAdapter;
     private String uId;
     private Button buttonGoBack;
     private User user;
-
-    public void setFlights(List<Flight> flights) {
-        this.flights = flights;
-    }
 
     public void init() {
         user = (User) getIntent().getSerializableExtra("user");
@@ -62,7 +57,6 @@ public class BuyFlightsActivity extends AppCompatActivity implements AdapterView
         DataBaseHelper.getInstance().getDB().child("flights").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //ArrayList<Flight> listFlights = new ArrayList<>();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     Flight flight = ds.getValue(Flight.class);
                     flights.add(flight);
@@ -86,7 +80,6 @@ public class BuyFlightsActivity extends AppCompatActivity implements AdapterView
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        //Toast.makeText(this, "You clicked on " + position, Toast.LENGTH_SHORT).show();
         Flight newFlight = flights.get(position);
         if (!userFlights.contains(newFlight.getNumFlight())){
             newFlight.addUserToList(uId);

@@ -1,26 +1,14 @@
 package com.example.user.myapplication;
 
-import android.support.annotation.NonNull;
-import android.util.Log;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+
 
 public class User implements Serializable {
     private String name;
     private long points;
-
     private ArrayList<String> listFlights = new ArrayList<>();
-    //private DataBaseHelper dbHelper = new DataBaseHelper();
 
 
     public User() {
@@ -29,7 +17,6 @@ public class User implements Serializable {
     public User(String name) {
         setName(name);
         setPoints(0);
-        //setListFlights(new ArrayList<Flight>());
     }
 
     public void setName(String name) {

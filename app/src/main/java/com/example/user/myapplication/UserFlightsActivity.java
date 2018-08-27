@@ -28,7 +28,6 @@ public class UserFlightsActivity extends AppCompatActivity implements AdapterVie
     private User logedInUser;
     private Intent userIntent;
     private ArrayAdapter<String> flightListAdapter;
-    private DataBaseHelper dbHelper = DataBaseHelper.getInstance();
     private List<String> listFlights;
     private ListView flightsList;
     private Button goBackButton;
@@ -49,7 +48,6 @@ public class UserFlightsActivity extends AppCompatActivity implements AdapterVie
             @Override
             public void onClick(View v) {
                 Intent na = new Intent(UserFlightsActivity.this, UserActivity.class);
-                //na.putExtra("user", logedInUser);
                 finish();
                 startActivity(na);
             }
@@ -66,7 +64,6 @@ public class UserFlightsActivity extends AppCompatActivity implements AdapterVie
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
-        Toast.makeText(this, "You clicked on " + position, Toast.LENGTH_SHORT).show();
         DataBaseHelper.getInstance().getDB().child("flights").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

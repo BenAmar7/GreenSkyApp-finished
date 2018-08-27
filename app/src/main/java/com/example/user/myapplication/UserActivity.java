@@ -23,7 +23,6 @@ public class UserActivity extends AppCompatActivity {
     private Intent logInIntent;
     private TextView userName, userPoints;
     private Button buttonFlights, buttonBuyFlights, buttonCreateBD;
-    private List<User> allUsers = new ArrayList<>();
 
     public void init() {
         logInIntent = getIntent();
