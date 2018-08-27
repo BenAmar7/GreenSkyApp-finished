@@ -36,7 +36,7 @@ public class UserActivity extends AppCompatActivity {
         buttonFlights = (Button) findViewById(R.id.watchUserFlights);
         buttonBuyFlights = (Button) findViewById(R.id.buyFlights);
         buttonCreateBD = (Button) findViewById(R.id.createDB);
-
+        press(false);
         buttonFlights.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +53,7 @@ public class UserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent na = new Intent(UserActivity.this, BuyFlightsActivity.class);
-                na.putExtra("user",user);
+                na.putExtra("user", user);
                 finish();
                 startActivity(na);
             }
@@ -92,6 +92,7 @@ public class UserActivity extends AppCompatActivity {
     public void getLogInUser() {
         userName.setText("Hello " + user.getName());
         userPoints.setText("Your sum of points is: " + user.getPoints());
+        press(true);
     }
 
     public void getUserFromDB(String uId) {
@@ -108,7 +109,6 @@ public class UserActivity extends AppCompatActivity {
                         }
                     }
                     user.setListFlights(listFlights);
-
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -120,6 +120,12 @@ public class UserActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void press(boolean canPress) {
+        buttonFlights.setEnabled(canPress);
+        buttonCreateBD.setEnabled(canPress);
+        buttonCreateBD.setEnabled(canPress);
     }
 
 }
