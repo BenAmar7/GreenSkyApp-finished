@@ -27,7 +27,6 @@ public class UserActivity extends AppCompatActivity {
 
     public void init() {
         logInIntent = getIntent();
-        //dbHelper = new DataBaseHelper();
 
         userName = (TextView) findViewById(R.id.userName);
         userPoints = (TextView) findViewById(R.id.userPoints);
@@ -36,6 +35,8 @@ public class UserActivity extends AppCompatActivity {
         buttonFlights = (Button) findViewById(R.id.watchUserFlights);
         buttonBuyFlights = (Button) findViewById(R.id.buyFlights);
         buttonCreateBD = (Button) findViewById(R.id.createDB);
+
+
         press(false);
         buttonFlights.setOnClickListener(new View.OnClickListener() {
             @Override
